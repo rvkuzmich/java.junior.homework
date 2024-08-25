@@ -14,11 +14,11 @@ public class Main {
         List<Integer> integers = fillArray();
         System.out.printf("Начальный список - %s", integers);
         System.out.println();
-        AtomicInteger sum = new AtomicInteger();
         integers = integers.stream().filter(num -> num % 2 == 0 && num > 0).toList();
         if (integers.isEmpty()) {
             System.out.println("Четных чисел в списке нет");
         } else {
+            AtomicInteger sum = new AtomicInteger();
             System.out.printf("Отфильтрованный список - %s", integers);
             integers.forEach(sum::addAndGet);
             System.out.println();
