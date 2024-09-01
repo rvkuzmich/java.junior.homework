@@ -25,7 +25,6 @@ public class Main {
             double n = sum.doubleValue();
             System.out.printf("Среднее значение четных чисел в списке - %.3f", n / integers.size());
         }
-
     }
     public static ArrayList<Integer> fillArray() {
         Random random = new Random();
